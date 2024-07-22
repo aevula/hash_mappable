@@ -1,0 +1,49 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 3.3.4
+  EnabledByDefault: true
+  NewCops: enable
+
+### Bundler ###
+
+Bundler/GemComment:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+### Style ###
+
+Style/Copyright:
+  Enabled: false # TODO: enable (Dedski-16)
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/RequireOrder:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  AllowedMethods: # TODO: AllowedPatterns
+    - to
+
+### Lint ###
+
+Lint/ConstantResolution:
+  Enabled: false
+
+### RSpec ###
+
+RSpec/MessageExpectation:
+  Enabled: false
+  # EnforcedStyle: expect

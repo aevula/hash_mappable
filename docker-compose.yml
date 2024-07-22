@@ -1,0 +1,23 @@
+services:
+  app:
+    image: dedski-hash_mappable:latest
+    build:
+      context: ./
+      args:
+        USER_GRUP: ${USER_GRUP}
+        USER_NAME: ${USER_NAME}
+        USER_PASW: ${USER_PASW}
+        ROOTS_GID: ${ROOTS_GID}
+        ROOTS_UID: ${ROOTS_UID}
+    volumes:
+      - ./:/opt/app
+    env_file:
+      - .env
+
+networks:
+  default:
+    name: dedski
+    ipam:
+      driver: default
+      config:
+        - subnet: "69.0.0.0/24"
