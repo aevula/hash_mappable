@@ -10,7 +10,7 @@ on:
       - master
 
 env:
-  COVERAGE=true
+  COVERAGE: true
 
 jobs:
   build:
