@@ -2,12 +2,12 @@
 
 module HashMappable
   class ChainWrapper
-    def initialize
-      @chains = {}
+    def chain(chain_name)
+      (@chains || reset!)[chain_name.to_sym] ||= []
     end
 
-    def chain(chain_name)
-      @chains[chain_name.to_sym] ||= []
+    def reset!
+      @chains = {}
     end
 
     def chain!(chain_name, &block)
